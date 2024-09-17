@@ -6,6 +6,7 @@ float pizza();
 float pizza_choose();
 float appetizers();
 float drinks();
+int membership();
 
 int choose_menu, choose_pizza, choose_appetizers;
 
