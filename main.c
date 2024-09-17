@@ -167,4 +167,7 @@ float drinks() {
         printf("Invalid choice\n");
         return drinks();
     }
+int membership(){
+
+}
 }
