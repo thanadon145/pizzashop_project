@@ -6,7 +6,7 @@ float pizza();
 float pizza_choose();
 float appetizers();
 float drinks();
-int membership2();
+int membership();
 
 int choose_menu, choose_pizza, choose_appetizers;
 
@@ -29,7 +29,7 @@ int main() {
 }
 
 float menu() {
-    printf("Option list\n");
+    printf("\nOption list\n");
     printf("1. Pizza\n");
     printf("2. Customize Pizza\n");
     printf("3. Appetizers\n");
@@ -48,7 +48,7 @@ float menu() {
 }
 
 float pizza() {
-    printf("You chose pizza.\n\n");
+    printf("\nYou chose pizza.\n\n");
     printf("---Pizza list---\n");
     printf("1. Margherita : $8.50\n");
     printf("2. Pepperoni : $9.00\n");
@@ -85,12 +85,12 @@ float pizza() {
 }
 
 float pizza_choose() {
-    printf("You chose to customize your pizza. Price will vary.\n");
+    printf("\nYou chose to customize your pizza. Price will vary.\n");
     return 12.00;
 }
 
 float appetizers() {
-    printf("You chose appetizers.\n");
+    printf("\nYou chose appetizers.\n");
     printf("---Appetizers list---\n");
     printf("1. Garlic Knots : $3.00\n");
     printf("2. Mozzarella Sticks : $5.00\n");
@@ -142,7 +142,7 @@ float appetizers() {
 }
 
 float drinks() {
-    printf("You chose drinks.\n");
+    printf("\nYou chose drinks.\n");
     printf("---Drinks list---\n");
     printf("1. Soda : $1.50\n");
     printf("2. Water : $1.00\n");
@@ -167,7 +167,7 @@ float drinks() {
         printf("Invalid choice\n");
         return drinks();
     }
-int membership2(){
+int membership(){
 
 }
 }
