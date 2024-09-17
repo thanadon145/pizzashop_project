@@ -6,7 +6,7 @@ float pizza();
 float pizza_choose();
 float appetizers();
 float drinks();
-int membership();
+int membership2();
 
 int choose_menu, choose_pizza, choose_appetizers;
 
@@ -167,7 +167,7 @@ float drinks() {
         printf("Invalid choice\n");
         return drinks();
     }
-int membership(){
+int membership2(){
 
 }
 }
