@@ -11,8 +11,6 @@ int membership();
 int choose_menu, choose_pizza, choose_appetizers;
 
 int main() {
-    printf("Test");
-    printf("test2");
     float total_price = 0.0;
     int continue_shopping = 1;
 
