@@ -28,6 +28,7 @@ void clear_input_buffer();  // Function to clear the input buffer
 int main() {
     float total_price = 0.0;
     int continue_shopping = 1;
+    printf("test");
 
     while (continue_shopping) {
         float item_price = menu();
