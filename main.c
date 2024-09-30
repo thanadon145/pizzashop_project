@@ -24,9 +24,11 @@ float appetizers();
 float drinks();
 void print_receipt(float total_price);  // New function to print the receipt
 void clear_input_buffer();  // Function to clear the input buffer
+float discount_member(float total_price);
 
 int main() {
     float total_price = 0.0;
+    float discount =0.0 ;
     int continue_shopping = 1;
 
     while (continue_shopping) {
@@ -41,6 +43,10 @@ int main() {
             clear_input_buffer();  // Clear buffer if input is invalid
         }
     }
+
+    //คำนวณส่วนลด
+    discount = discount_member(total_price);
+    total_price -= discount;
 
     // Print the receipt when shopping is done
     print_receipt(total_price);
@@ -173,4 +179,31 @@ void print_receipt(float total_price) {
 void clear_input_buffer() {
     int ch;
     while ((ch = getchar()) != '\n' && ch != EOF);
+}
+
+float discount_member(float total_price){
+    //รับค่าเวลาปัจจุบันจากระบบ
+    time_t currenTime = time(NULL);
+    struct tm *localTime = localtime(&currenTime);
+    //เก็บเดือนจากระบบ
+    int currenMonth = localTime->tm_mon + 1;
+
+    //เช็คเดือนเกิดและเงื่อนไขเพื่อให้ส่วนลด
+    float discount = 0.0;
+    int birth_month;
+    do{
+        printf("Enter birth month(1-12) :");
+        scanf("%d",&birth_month);
+        if(birth_month < 1 && birth_month > 12){
+            printf("Error input\n");
+            printf("Try again\n");
+        }
+    }while(birth_month < 1 && birth_month > 12);
+
+    if(birth_month == currenMonth && total_price >= 10){
+        printf("Happy Birthday Month\n");
+        printf("You get a 15%% Discount!\n");
+        discount = total_price * 0.15;
+    }
+    return discount;
 }
