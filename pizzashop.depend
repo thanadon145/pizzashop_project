@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1727673067 source:c:\users\rog strix\documents\github\pizzashop_project\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+
